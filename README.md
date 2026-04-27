@@ -65,15 +65,15 @@ PATH_TO/python3 run_tools.py (--infer | --scan-build | --ikos | --klee | --smatc
 * Select test suite configuration by using `--config`. Default value is `test_suite_config.json`.
 
 ### Usage examples:
-This example will run infer on test suites specified in `test_suite_config.json` on docker container after building an 
-image for infer. Result and lib-clang paths will be set with their default values:
+This example will run scan-build on test suites specified in `test_suite_config.json` on docker container after building an 
+image for scan-build. Result and lib-clang paths will be set with their default values:
 ```shell
-PATH_TO/python3 run_tools.py --infer
+PATH_TO/python3 run_tools.py --scan-build
 ```
 
 If there is an already built image, and you want to skip the process of building it again you can use:
 ```shell
-PATH_TO/python3 run_tools.py --infer --image-build-disable
+PATH_TO/python3 run_tools.py --scan-build --image-build-disable
 ```
 
 ### Result:

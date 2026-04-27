@@ -140,11 +140,10 @@ class FunctionExtractor:
     def get_source_file_from_function(self, function_name: str) -> str:
         prefix = function_name.replace("_bad", "").replace("_good", "")
         for src, funcs in self.sources.items():
-            if os.path.basename(src).startswith(prefix) and function_name in funcs:
-                if os.path.basename(src).startswith(prefix):
-                    for func in funcs:
-                        if func.name == function_name:
-                            return src
+            if os.path.basename(src).startswith(prefix):
+                for func in funcs:
+                    if func.name == function_name:
+                        return src
         return ""
 
     def _get_function_by_line(self, file_path, line):
