@@ -1,0 +1,4 @@
+chardet
+cxxfilt
+docker
+libclang==16.0.6
